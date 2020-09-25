@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Chapter 2 Notes</title>
+</head>
+
+<body>
+
+    <h1>Programming Basics - Ch. 2</h1>
+    <h3>Template Literals</h3>
+    <ul>
+        <li>Super powered strings with string interpolation.</li>
+        <li>Interpolation = JavaScript expression that is inserted inside a string.</li>
+    </ul>
+    <h3>Numbers</h3>
+    <ul style="list-style-type: disc;">
+        <li>Number.isInteger()</li>
+        <li>Octal &amp; Hexadecimal numbers<ul>
+                <li>How are these used?</li>
+                <li>What are these used for?</li>
+            </ul>
+        </li>
+        <li>Exponential Notation<ul>
+                <li>Means &quot;multiply by 10 to the power of&quot;</li>
+                <li>Example: 1e6 &nbsp;&lt;&lt; 1,000,000 or 2E3 &lt;&lt;2000</li>
+            </ul>
+        </li>
+    </ul>
+    <h3>Number Methods</h3>
+    <p>
+        <meta charset="utf-8">
+    </p>
+    <p>&nbsp;**Be careful using. notation with integers. JavaScript will confuse the dot with a decimal point.**</p>
+    <p><br></p>
+    <p><u>Other options:</u></p>
+    <ul>
+        <li>Used to dots 5..Method()</li>
+        <li>Put a space before the dot 5 .Method()</li>
+        <li>Write integers as a decimal 5.0.Method()</li>
+        <li>Place integers in parenthesis (5).Method()</li>
+    </ul>
+    <p><br></p>
+    <p><u>Methods:&nbsp;</u>(Number are always returned as string)</p>
+    <p><strong>.toExponential()</strong> - Returns numbers as a string in exponential notation. Example:
+        5..toExponential(); &gt;&gt;&quot;5e+10&quot;</p>
+    <p><strong>.toFixed()</strong> - &nbsp;Rounds number to fixed decimal place. Example: (3.141592).toFixed(2);
+        &gt;&gt;&quot;3.14&quot;</p>
+    <p><strong>.toPrecision()</strong>Rounds to a fixed number of significant figures.</p>
+    <p><strong>.Number.isFinite()</strong> - Returns true if the value is a number that isn&#39;t infinity, -infinity or
+        NaN</p>
+    <p><strong>Number(&#39; &#39;)</strong> - &nbsp;Returns string to a number.</p>
+    <p><strong>String()</strong> or <strong>.toString()</strong></p>
+    <p><strong>parseInt()</strong> - &nbsp;Removes everything after decimal (doesn&#39;t use rounding)</p>
+    <p><strong>parseFloat()</strong> - Converts strings and 2 floating point decimal numbers.</p>
+    <hr>
+    <p>% operator = &nbsp;Calculates the remainder.</p>
+    <p>NaN = Not a number.&nbsp;</p>
+    <p>Undefined = &quot; I can&#39;t find a value for this&quot; (set by default)</p>
+    <p>Null = &#39;No value&#39; &nbsp;Acts as a place holder 0 (manually set)</p>
+    <hr>
+    <p><strong>Lazy Evaluation </strong>- Only check the minimum criteria that needs to be met</p>
+    <p><strong>Soft equality</strong> - &quot;==&quot; Javascript doesn&#39;t take into account the data type. So it
+        will say that &quot;5&quot; string is the same as 5 number.</p>
+    <p><strong>Hard equality</strong> - &quot;===&quot; Returns true if they are the same data type.</p>
+    <p><strong>Inequality</strong>&nbsp;- &quot;!=&quot; or &quot;!==&quot;</p>
+    <hr>
+    <p><u>Summary Notes</u>:</p>
+    <p>6 &nbsp;Primitive data types:</p>
+    <ul>
+        <li>Strings</li>
+        <li>Symbols</li>
+        <li>Numbers</li>
+        <li>Booleans</li>
+        <li>Undefined</li>
+        <li>Null</li>
+    </ul>
+    <p>Non-primitive data is all type of object.</p>
+    <ul>
+        <li>Arrays</li>
+        <li>Functions</li>
+        <li>Objects</li>
+    </ul>
+    <p>Symbols</p>
+    <ul>
+        <li>Unique and immutable values</li>
+        <li>const uniqueID = Symbol(&#39;this is a unique ID&#39;)</li>
+    </ul>
+    <p>7 Falsy values:</p>
+    <ul>
+        <li>&quot; &quot;, &#39; &#39;, ` ` (empty quotes)</li>
+        <li>0</li>
+        <li>-0</li>
+        <li>NaN</li>
+        <li>false</li>
+        <li>null</li>
+        <li>Undefined</li>
+    </ul>
+    <p>Type Coercion:</p>
+    <ul>
+        <li>When Java script tries to convert a value into another data type in order to perform an operation.</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Chapter 3 Notes</title>
+</head>
+
+<body>
+    <h1>Arrays, Logic, and Loops - Ch. 3</h1>
+    <h2><u>Arrays</u></h2>
+    <ul style="list-style-type: disc;">
+        <li>Ordered list of values.</li>
+        <li>const myArray = []; <strong>or&nbsp;</strong>const myArray = new Array();</li>
+        <li><strong><span style="color: #e25041;">const avengers = ['Captain America', 'Iron Man', 'Thor',
+                    'Hulk'];</span></strong></li>
+        <li>You don&rsquo;t even have to use the same types of items inside an array</li>
+    </ul>
+    <p><strong>Example:&nbsp;</strong>Delete avengers[3];&nbsp;</p>
+    <ul style="list-style-type: disc;">
+        <li>The fourth entry, 'Hulk' (with an index of 3), has been removed, but it has been <u>replaced by a value of
+                undefined:</u><br /><strong>avengers;<br />&lt;&lt; ['Captain America', 'Iron Man', 'Thor',
+                undefined]</strong></li>
+    </ul>
+    <hr>
+    <p><strong>Destructuring -</strong> taking values out of an array and presenting them as individual values.</p>
+    <ul style="list-style-type: disc;">
+        <li>Allows you to assign multiple values at the same time, using arrays</li>
+        <li>Example: <strong>const [x,y] = [1,2];&nbsp;</strong>This will return<strong>&nbsp;</strong>x &lt;&lt; 1
+            and<strong>&nbsp;</strong>y &lt;&lt; 2</li>
+    </ul>
+    <hr>
+    <p><strong>Array Properties and Methods</strong></p>
+    <p>Length property:</p>
+    <ul style="list-style-type: disc;">
+        <li>avengers.length;<br />&lt;&lt; 6</li>
+        <li>To find the last item in an array use subtract 1
+            <ul>
+                <li>Example: &nbsp;avengers[avengers.length - 1];<br />&lt;&lt; 'Hulk'</li>
+            </ul>
+        </li>
+        <li>The length property is mutable (you can manually change it)</li>
+    </ul>
+    <p><strong>Pop, Push, Shift, and Unshift</strong></p>
+    <p>pop() method:</p>
+    <ul style="list-style-type: disc;">
+        <li>Removes the last item from an array completely.</li>
+    </ul>
+    <p>shift() method:</p>
+    <ul style="list-style-type: disc;">
+        <li>removes the first item in the array</li>
+    </ul>
+    <p>push() method:</p>
+    <ul style="list-style-type: disc;">
+        <li>appends a new value to the end of the array.</li>
+    </ul>
+    <p>unshift() method:</p>
+    <ul style="list-style-type: disc;">
+        <li>this appends a new item to the beginning of the array.</li>
+    </ul>
+    <hr>
+    <p><strong>Merging Arrays</strong></p>
+    <p>concat() method</p>
+    <ul style="list-style-type: disc;">
+        <li>creates another array and combines the two arrays.</li>
+    </ul>
+    <p>spread operator (...)</p>
+    <ul style="list-style-type: disc;">
+        <li>placed in front of an array</li>
+        <li>spreads out the elements of that array</li>
+    </ul>
+</body>
+
+</html>
