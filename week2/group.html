@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 2 Group Project</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <script>
+        function myFunction(){
+            const value = document.getElementById('input').value;
+            document.getElementById('empty').innerHTML=value;
+
+        };
+        function sum(){
+            const value = document.getElementById('input').value;
+            let holder = 0;
+            for(let i=0; i <= value; i++){
+                holder += i;
+            }
+            document.getElementById('empty').innerHTML=holder;
+        };
+        function calc(){
+            const value = document.getElementById('input').value;
+            const value2 = document.getElementById('input2').value;
+            const value3 = document.getElementById('input3').value;
+
+            let a = parseFloat(value);
+            let b = parseFloat(value2);
+            let total = a+b;
+
+
+            document.getElementById('empty').innerHTML=total;
+        };
+
+        const subtract = function(){
+            const value = document.getElementById('input').value;
+            const value2 = document.getElementById('input2').value;
+            const value3 = document.getElementById('input3').value;
+
+            let a = parseFloat(value);
+            let b = parseFloat(value2);
+            let total = a+b;
+
+            document.getElementById('empty').innerHTML=total;
+        }
+    </script>
+</head>
+
+<body>
+    <input id="input" type="text">
+    <!-- <button onclick="sum()">button</button> -->
+    <input id="input3" type="text">
+    <input id="input2" type="text">
+    <button onclick="calc()">button</button>
+    <div id="empty"></div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 2 Notes</title>
+    <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+    <h1>Functions - Ch. 4</h1>
+    <h2>Defining a Function</h2>
+    <h3>Function Expressions</h3>
+    <ul>
+        <li>const goodbye = function(){<br />console.log('Goodbye World!');<br />};</li>
+        <li>Anonymous function - doesn't have a name; it is simply created, then assigned to a variable.</li>
+    </ul>
+    <h2>Invoking a Function</h2>
+    <ul>
+        <li>run the code inside the function&rsquo;s body</li>
+        <li>hello();</li>
+        <li>Keep Your Code DRY - avoids duplication and means there&rsquo;s no need to keep multiple pieces of code up
+            to date and in sync.</li>
+    </ul>
+    <h2>Parameters and Argumentsfunction</h2>
+    <p>*Parameters and arguments are terms that are often used <strong>interchangeably</strong> to<br />represent values
+        provided for the function as an input.*</p>
+    <ul>
+        <li>square(x){<br />return x*x;<br />}</li>
+        <li>provide an argument of 4.5</li>
+        <li>square(4.5);<br />&lt;&lt; 20.25</li>
+    </ul>
+    <h3>Variable Numbers of Arguments</h3>
+    <ul>
+        <li>arguments
+            <ul>
+                <li>a special variable</li>
+                <li>an array-like object that contains every argument passed to the function when it is invoked.</li>
+            </ul>
+        </li>
+        <li>rest operator
+            <ul>
+                <li>place three dots in front of the last parameter in a function declaration function
+                    rest(...args){<br />return args;<br />}</li>
+            </ul>
+        </li>
+    </ul>
+    <h3>Improved Mean Function</h3>
+</body>
+
+</html>

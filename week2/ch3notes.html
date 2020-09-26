@@ -10,7 +10,7 @@
 
 <body>
     <h1>Arrays, Logic, and Loops - Ch. 3</h1>
-    <h2><u>Arrays</u></h2>
+    <h2>Arrays&nbsp;<u> </u></h2>
     <ul>
         <li>Ordered list of values.</li>
         <li>const myArray = []; <strong>or&nbsp;</strong>const myArray = new Array();</li>
@@ -75,17 +75,66 @@
             Widow'</li>
     </ul>
     <h3><strong>Slicing and Splicing</strong></h3>
-    <p>slice() method</p>
+    <p>slice() method:</p>
     <ul>
         <li>subarray</li>
         <li>chopping out a slice of anoriginal array, starting at one position and finishing at another.</li>
         <li>non-destructive ― no items are actually removed from the array.</li>
     </ul>
-    <p>splice() method</p>
+    <p>splice() method:</p>
     <ul>
         <li>removes items from an array then inserts new items in their place.</li>
-        <li>destructive - changes the value of the array.</li>
+        <li>destructive - changes the value of the array <strong>permanently</strong>.</li>
+        <li>Example: avengers.splice(3, 1, 'Scarlet Witch');
+            <ul>
+                <li>(the index at which to start the splice, how many items to remove, Every value after this is then
+                    inserted into the array in the same place the other items were removed.)</li>
+            </ul>
+        </li>
     </ul>
+    <p>reverse() method:</p>
+    <ul>
+        <li>Reverses the order of the array permanently.</li>
+    </ul>
+    <p>sort() method:</p>
+    <ul>
+        <li>sorts the array in alphabetical order.</li>
+    </ul>
+    <p>indexOf() method:</p>
+    <ul>
+        <li>find the first occurrence of a value in an array</li>
+        <li>it will return the index of the first occurrence of that item</li>
+        <li>If the item is not in the array, it will return -1</li>
+    </ul>
+    <p>includes() method:</p>
+    <ul>
+        <li>returns a boolean value depending on whether the array contains a particular element or not.</li>
+        <li>You can also add an extra parameter to indicate which index to start the search from. Example:
+            avengers.includes('Black Widow', 1); // will start the search from the second element in the array.</li>
+    </ul>
+    <h3>Multidimensional Arrays</h3>
+    <ul>
+        <li>array of array's</li>
+        <li>use two indices: one to refer to the item&rsquo;s place in the outer array, and one to refer to its place in
+            the inner array
+            <ul>
+                <li>Example: const coordinates = [[1,3],[4,2]];<br />coordinates[1][0]; // The first value of the second
+                    array<br />&lt;&lt; 4</li>
+            </ul>
+        </li>
+    </ul>
+    <h2>Sets</h2>
+    <ul>
+        <li>Introduced to the specification in ES6</li>
+        <li>A set is a data structure that represents a collection of unique values.</li>
+        <li>Cannot include any duplicate values.</li>
+    </ul>
+    <p><strong>Creating Sets</strong></p>
+    <ul>
+        <li>const list = new Set();</li>
+        <li>no literal notation for creating sets</li>
+    </ul>
+    <p><strong>Adding Values to Sets</strong></p>
 </body>
 
 </html>
