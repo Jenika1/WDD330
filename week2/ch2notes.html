@@ -3,104 +3,139 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Chapter 2 Notes</title>
 </head>
 
 <body>
-
-    <h1>Programming Basics - Ch. 2</h1>
-    <h3>Template Literals</h3>
+    <h1>Arrays, Logic, and Loops - Ch. 3</h1>
+    <h2>Arrays&nbsp;<u> </u></h2>
     <ul>
-        <li>Super powered strings with string interpolation.</li>
-        <li>Interpolation = JavaScript expression that is inserted inside a string.</li>
+        <li>Ordered list of values.</li>
+        <li>const myArray = []; <strong>or&nbsp;</strong>const myArray = new Array();</li>
+        <li><strong>const avengers = ['Captain America', 'Iron Man', 'Thor', 'Hulk'];</strong></li>
+        <li>You don&rsquo;t even have to use the same types of items inside an array</li>
     </ul>
-    <h3>Numbers</h3>
-    <ul style="list-style-type: disc;">
-        <li>Number.isInteger()</li>
-        <li>Octal &amp; Hexadecimal numbers<ul>
-                <li>How are these used?</li>
-                <li>What are these used for?</li>
+    <p><strong>Example:&nbsp;</strong>Delete avengers[3];&nbsp;</p>
+    <ul>
+        <li>The fourth entry, 'Hulk' (with an index of 3), has been removed, but it has been <u>replaced by a value of
+                undefined:</u><br /><strong>avengers;<br />&lt;&lt; ['Captain America', 'Iron Man', 'Thor',
+                undefined]</strong></li>
+    </ul>
+    <p><strong>Destructuring -</strong> taking values out of an array and presenting them as individual values.</p>
+    <ul>
+        <li>Allows you to assign multiple values at the same time, using arrays</li>
+        <li>Example: <strong>const [x,y] = [1,2];&nbsp;</strong>This will return<strong>&nbsp;</strong>x &lt;&lt; 1
+            and<strong>&nbsp;</strong>y &lt;&lt; 2</li>
+    </ul>
+    <h3><strong>Array Properties and Methods</strong></h3>
+    <p>Length property:</p>
+    <ul>
+        <li>avengers.length;<br />&lt;&lt; 6</li>
+        <li>To find the last item in an array use subtract 1
+            <ul>
+                <li>Example: &nbsp;avengers[avengers.length - 1];<br />&lt;&lt; 'Hulk'</li>
             </ul>
         </li>
-        <li>Exponential Notation<ul>
-                <li>Means &quot;multiply by 10 to the power of&quot;</li>
-                <li>Example: 1e6 &nbsp;&lt;&lt; 1,000,000 or 2E3 &lt;&lt;2000</li>
+        <li>The length property is mutable (you can manually change it)</li>
+    </ul>
+    <h3><strong>Pop, Push, Shift, and Unshift</strong></h3>
+    <p>pop() method:</p>
+    <ul>
+        <li>Removes the last item from an array completely.</li>
+    </ul>
+    <p>shift() method:</p>
+    <ul>
+        <li>removes the first item in the array</li>
+    </ul>
+    <p>push() method:</p>
+    <ul>
+        <li>appends a new value to the end of the array.</li>
+    </ul>
+    <p>unshift() method:</p>
+    <ul>
+        <li>this appends a new item to the beginning of the array.</li>
+    </ul>
+    <h3><strong>Merging Arrays</strong></h3>
+    <p>concat() method</p>
+    <ul>
+        <li>creates another array and combines the two arrays.</li>
+    </ul>
+    <p>spread operator (...)</p>
+    <ul>
+        <li>placed in front of an array</li>
+        <li>spreads out the elements of that array</li>
+    </ul>
+    <h3><strong>The join() Method</strong></h3>
+    <ul>
+        <li>turns the array into a string made up of all the items in the array, separated by commas.</li>
+        <li>You can choose a separator other than a comma by placing it inside the parentheses. Eample: avengers.join('
+            &amp; ');<br />&lt;&lt; 'Captain America &amp; Iron Man &amp; Thor &amp; Hulk &amp; Hawkeye &amp; Black
+            Widow'</li>
+    </ul>
+    <h3><strong>Slicing and Splicing</strong></h3>
+    <p>slice() method:</p>
+    <ul>
+        <li>subarray</li>
+        <li>chopping out a slice of anoriginal array, starting at one position and finishing at another.</li>
+        <li>non-destructive ― no items are actually removed from the array.</li>
+    </ul>
+    <p>splice() method:</p>
+    <ul>
+        <li>removes items from an array then inserts new items in their place.</li>
+        <li>destructive - changes the value of the array <strong>permanently</strong>.</li>
+        <li>Example: avengers.splice(3, 1, 'Scarlet Witch');
+            <ul>
+                <li>(the index at which to start the splice, how many items to remove, Every value after this is then
+                    inserted into the array in the same place the other items were removed.)</li>
             </ul>
         </li>
     </ul>
-    <h3>Number Methods</h3>
-    <p>
-        <meta charset="utf-8">
-    </p>
-    <p>&nbsp;**Be careful using. notation with integers. JavaScript will confuse the dot with a decimal point.**</p>
-    <p><br></p>
-    <p><u>Other options:</u></p>
+    <p>reverse() method:</p>
     <ul>
-        <li>Used to dots 5..Method()</li>
-        <li>Put a space before the dot 5 .Method()</li>
-        <li>Write integers as a decimal 5.0.Method()</li>
-        <li>Place integers in parenthesis (5).Method()</li>
+        <li>Reverses the order of the array permanently.</li>
     </ul>
-    <p><br></p>
-    <p><u>Methods:&nbsp;</u>(Number are always returned as string)</p>
-    <p><strong>.toExponential()</strong> - Returns numbers as a string in exponential notation. Example:
-        5..toExponential(); &gt;&gt;&quot;5e+10&quot;</p>
-    <p><strong>.toFixed()</strong> - &nbsp;Rounds number to fixed decimal place. Example: (3.141592).toFixed(2);
-        &gt;&gt;&quot;3.14&quot;</p>
-    <p><strong>.toPrecision()</strong>Rounds to a fixed number of significant figures.</p>
-    <p><strong>.Number.isFinite()</strong> - Returns true if the value is a number that isn&#39;t infinity, -infinity or
-        NaN</p>
-    <p><strong>Number(&#39; &#39;)</strong> - &nbsp;Returns string to a number.</p>
-    <p><strong>String()</strong> or <strong>.toString()</strong></p>
-    <p><strong>parseInt()</strong> - &nbsp;Removes everything after decimal (doesn&#39;t use rounding)</p>
-    <p><strong>parseFloat()</strong> - Converts strings and 2 floating point decimal numbers.</p>
-    <hr>
-    <p>% operator = &nbsp;Calculates the remainder.</p>
-    <p>NaN = Not a number.&nbsp;</p>
-    <p>Undefined = &quot; I can&#39;t find a value for this&quot; (set by default)</p>
-    <p>Null = &#39;No value&#39; &nbsp;Acts as a place holder 0 (manually set)</p>
-    <hr>
-    <p><strong>Lazy Evaluation </strong>- Only check the minimum criteria that needs to be met</p>
-    <p><strong>Soft equality</strong> - &quot;==&quot; Javascript doesn&#39;t take into account the data type. So it
-        will say that &quot;5&quot; string is the same as 5 number.</p>
-    <p><strong>Hard equality</strong> - &quot;===&quot; Returns true if they are the same data type.</p>
-    <p><strong>Inequality</strong>&nbsp;- &quot;!=&quot; or &quot;!==&quot;</p>
-    <hr>
-    <p><u>Summary Notes</u>:</p>
-    <p>6 &nbsp;Primitive data types:</p>
+    <p>sort() method:</p>
     <ul>
-        <li>Strings</li>
-        <li>Symbols</li>
-        <li>Numbers</li>
-        <li>Booleans</li>
-        <li>Undefined</li>
-        <li>Null</li>
+        <li>sorts the array in alphabetical order.</li>
     </ul>
-    <p>Non-primitive data is all type of object.</p>
+    <p>indexOf() method:</p>
     <ul>
-        <li>Arrays</li>
-        <li>Functions</li>
-        <li>Objects</li>
+        <li>find the first occurrence of a value in an array</li>
+        <li>it will return the index of the first occurrence of that item</li>
+        <li>If the item is not in the array, it will return -1</li>
     </ul>
-    <p>Symbols</p>
+    <p>includes() method:</p>
     <ul>
-        <li>Unique and immutable values</li>
-        <li>const uniqueID = Symbol(&#39;this is a unique ID&#39;)</li>
+        <li>returns a boolean value depending on whether the array contains a particular element or not.</li>
+        <li>You can also add an extra parameter to indicate which index to start the search from. Example:
+            avengers.includes('Black Widow', 1); // will start the search from the second element in the array.</li>
     </ul>
-    <p>7 Falsy values:</p>
+    <h3>Multidimensional Arrays</h3>
     <ul>
-        <li>&quot; &quot;, &#39; &#39;, ` ` (empty quotes)</li>
-        <li>0</li>
-        <li>-0</li>
-        <li>NaN</li>
-        <li>false</li>
-        <li>null</li>
-        <li>Undefined</li>
+        <li>array of array's</li>
+        <li>use two indices: one to refer to the item&rsquo;s place in the outer array, and one to refer to its place in
+            the inner array
+            <ul>
+                <li>Example: const coordinates = [[1,3],[4,2]];<br />coordinates[1][0]; // The first value of the second
+                    array<br />&lt;&lt; 4</li>
+            </ul>
+        </li>
     </ul>
-    <p>Type Coercion:</p>
+    <h2>Sets</h2>
     <ul>
-        <li>When Java script tries to convert a value into another data type in order to perform an operation.</li>
+        <li>Introduced to the specification in ES6</li>
+        <li>A set is a data structure that represents a collection of unique values.</li>
+        <li>Cannot include any duplicate values.</li>
     </ul>
+    <p><strong>Creating Sets</strong></p>
+    <ul>
+        <li>const list = new Set();</li>
+        <li>no literal notation for creating sets</li>
+    </ul>
+    <p><strong>Adding Values to Sets</strong></p>
+    <p>&nbsp;</p>
 </body>
 
 </html>
