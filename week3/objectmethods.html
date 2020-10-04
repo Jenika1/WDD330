@@ -11,7 +11,49 @@
 
 <body>
     <header></header>
-    <main></main>
+    <main>
+        <h1>Object methods, "this"</h1>
+        <p>Objects are usually created to represent entities of the real world, like users, orders, and so on.</p>
+        <p>**<strong>To access the object, a method can use the <code>this</code> keyword.</strong>**</p>
+        <pre><code>let user = {
+          name: "John",
+          age: 30,
+        
+          sayHi() {
+        <em>    // "this" is the "current object"
+            alert(this.name);</em>
+          }
+        
+        };
+        
+        user.sayHi(); // John<br /></code></pre>
+        <ul>
+            <li>"this" references the outer object.</li>
+            <li>this - value is evaluated at call-time and does not depend on where the method was declared, but rather
+                on what object is &ldquo;before the dot&rdquo;.</li>
+        </ul>
+        <h2>Arrow functions have no &ldquo;this&rdquo;</h2>
+        <ul>
+            <li>
+                <p>Please note that arrow functions are special: they have no <code>this</code>. When <code>this</code>
+                    is accessed inside an arrow function, it is taken from outside.</p>
+            </li>
+        </ul>
+        <h2>Summary</h2>
+        <ul>
+            <li>Functions that are stored in object properties are called &ldquo;methods&rdquo;.</li>
+            <li>Methods allow objects to &ldquo;act&rdquo; like <code>object.doSomething()</code>.</li>
+            <li>Methods can reference the object as <code>this</code>.</li>
+        </ul>
+        <p>The value of <code>this</code> is defined at run-time.</p>
+        <ul>
+            <li>When a function is declared, it may use <code>this</code>, but that <code>this</code> has no value until
+                the function is called.</li>
+            <li>A function can be copied between objects.</li>
+            <li>When a function is called in the &ldquo;method&rdquo; syntax: <code>object.method()</code>, the value of
+                <code>this</code> during the call is <code>object</code>.</li>
+        </ul>
+    </main>
     <footer></footer>
     <script src="js/objectmethod.js"></script>
 </body>

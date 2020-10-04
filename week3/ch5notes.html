@@ -4,14 +4,151 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Week 3 Notes</title>
+    <title>Chapter 5 Notes</title>
     <link rel="stylesheet" href="styles.css" />
 
 </head>
 
 <body>
     <header></header>
-    <main></main>
+    <main>
+        <h1>Objects</h1>
+        <ul>
+            <li>user-defined objects vs. built-in objects</li>
+        </ul>
+        <h2>Object Literals</h2>
+        <p><strong>Object</strong> =&nbsp;a self-contained set of related values and functions&nbsp;</p>
+        <ul>
+            <li>a collection of named properties that map to any JavaScript value</li>
+        </ul>
+        <p><strong>method</strong> = when a property&rsquo;s value is a function.</p>
+        <p><strong>Object Literals </strong>= an object that is created directly in the language by wrapping all its
+            properties and methods in curly braces {}.</p>
+        <ul>
+            <li>Also provide a useful way of organizing your code without polluting the global namespace.</li>
+        </ul>
+        <p><strong>** </strong>All objects are mutable at any time when a program is running. <strong>**</strong></p>
+        <img src="images/object_literal.png" alt="Object Literal Example" width="100%">
+        <h2><strong>Creating Objects</strong></h2>
+        <ul>
+            <li>const spiderman = {};</li>
+            <li>create an object using a constructor function (not recommended)<br />
+                <ul>
+                    <li>const spiderman = new Object();</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Accessing Properties</h3>
+        <ul>
+            <li>access the properties of an object using the dot notation
+                <ul>
+                    <li>superman.name<br />&lt;&lt; 'Superman'</li>
+                </ul>
+            </li>
+            <li>bracket notation
+                <ul>
+                    <li>superman['name']<br />&lt;&lt; 'Superman'</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Computed Properties (introduced in ES6)</h3>
+        <ul>
+            <li>code can be placed inside square brackets and the property key will be the return value of that code.
+                <ul>
+                    <li>const hulk = { name: 'Hulk', ['catch' + 'Phrase']: 'Hulk Smash!' };</li>
+                    <li>&lt;&lt; { name: 'Hulk', catchPhrase: 'Hulk Smash!' }</li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Calling Methods</h2>
+        <p>Calling a method is the same as invoking a function, so parentheses need to be placed after<br />the method
+            name.</p>
+        <h2>Checking if Properties or Methods Exist</h2>
+        <p><strong>in</strong> - used to check whether an object has a particular property.</p>
+        <p>** objects can inherit properties from other objects **</p>
+        <p><strong>hasOwnProperty()</strong> - used to check whether an object has a property that is its own, rather
+            than one that has been inherited from another object</p>
+        <h2>Finding all the Properties of an Object</h2>
+        <p>for in - loops through all of an object&rsquo;s properties and methods.</p>
+        <p><strong>Object.keys()</strong> - will return an array of all the keys of any object that<br />is provided as
+            an argument.</p>
+        <p><strong>Object.values() </strong>- returns an array of all the object&rsquo;s value.</p>
+        <p><strong>Object.entries() </strong>- returns an array of key-value pairs. key-value pairs are returned in
+            arrays.</p>
+        <h3>Adding Properties</h3>
+        <img src="images/addingProp.png" alt="Adding Properties image" width="50%">
+        <h2>Removing Properties</h2>
+        <p><strong>delete</strong> operator - Any property can be removed from an object useing this.</p>
+        <h2>Nested Objects</h2>
+        <p>**The values in nested objects can be accessed by referencing each property name in order using either dot or
+            bracket notation.**</p>
+        <h3 data-block="k01nwtw2">Objects as Parameters to Functions</h3>
+        <p>allows the arguments to be provided by name and in any order.</p>
+        <p><strong>named parameters</strong> - often used when a function has a large amount of optional parameters.</p>
+        <h3>this</h3>
+        <p>** refers to the object that it is within **</p>
+        <h2>Namespacing</h2>
+        <p><strong>object literal pattern</strong> - This is done by creating an object literal that serves as the
+            namespace, then adding any values as properties of that object, and any functions as methods.</p>
+        <p data-block="k01nwtwv"><strong>Namespace </strong>= place all your functions inside an object.</p>
+        <ul>
+            <li data-block="k01nwtwv">Now these functions need to be preceded by the namespace (object) to be invoked.
+            </li>
+        </ul>
+        <h2 data-block="k01nwtwy">Built-in Objects</h2>
+        <ul>
+            <li>Array</li>
+            <li>Function</li>
+        </ul>
+        <h3>JSON</h3>
+        <ul>
+            <li>A lightweight data-storage format that is used by a large number of services for data serialization and
+                configuration.</li>
+            <li>JSON is a string representation of the object literal notation
+                <ul>
+                    <li>Property names must be double-quoted</li>
+                    <li>Permitted values are double-quoted strings, numbers, true, false, null, arrays and objects</li>
+                    <li>Functions are not permitted values</li>
+                </ul>
+            </li>
+        </ul>
+        <p><strong>&nbsp;<code>parse()</code></strong>- takes a string of data in JSON format and returns a JavaScript
+            object.</p>
+        <ul>
+            <li>example:
+                <ul>
+                    <li>
+                        <div>JSON.parse(batman);</div>
+                        <div>&lt;&lt; { name: 'Batman',</div>
+                        <div>'real name': 'Bruce Wayne',</div>
+                        <div>height: 74,</div>
+                        <div>weight: 210,</div>
+                        <div>hero: true,</div>
+                        <div>villain: false,</div>
+                        <div>allies: [ 'Robin', 'Batgirl', 'Superman' ] }</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>&nbsp;<strong><code>stringify()</code></strong> - does the opposite, taking a JavaScript object and returning
+            a string of JSON data.</p>
+        <ul>
+            <li>example:
+                <ul>
+                    <li>
+                        <div>JSON.stringify(wonderWoman);</div>
+                        <div>&lt;&lt; '{"name":"Wonder Woman","real name":"Diana Prince","height":72,</div>
+                        <div>"weight":165,"hero":true,"villain":false,"allies":["Wonder Girl",</div>
+                        <div>"Donna Troy","Superman"]}'</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3>The&nbsp;<code>Math</code> Object</h3>
+        <h3>The Date Object</h3>
+        <h3>The RegExp Object</h3>
+        <h3>Basic Regular Expression</h3>
+    </main>
     <footer></footer>
 </body>
 
