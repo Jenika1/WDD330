@@ -1,0 +1,29 @@
+.table {
+    display: grid;
+}
+
+.row {
+    display: grid;
+    border-bottom: 2px solid black;
+}
+
+.row3 {
+    border-bottom: none;
+}
+
+.col1 {
+    grid-column: 1;
+    padding: 30px;
+    border-right: 2px solid black;
+}
+
+.col2 {
+    padding: 30px;
+    grid-column: 2;
+}
+
+.col3 {
+    padding: 30px;
+    border-left: 2px solid black;
+    grid-column: 3;
+}
