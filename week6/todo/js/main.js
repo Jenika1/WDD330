@@ -17,6 +17,18 @@ function List() {
     // label.setAttribute('class', 'td');
 }
 
-function utilities() {
+function tasksLeft() {
+
+}
+
+function all() {
+
+}
+
+function active() {
+
+}
+
+function completed() {
 
 }
