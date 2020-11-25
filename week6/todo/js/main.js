@@ -13,6 +13,10 @@ function List() {
     const text = document.getElementById("text");
     label.innerHTML = text.value;
 
+    //Local storage
+    
+    localStorage.setItem('Task', text.value);
+
     //push class to label. Make it dynamic.
     // label.setAttribute('class', 'td');
 }
