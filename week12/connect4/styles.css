@@ -1,0 +1,10 @@
+.grid-wraper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;    
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    border: 2px solid black;
+}
+
+.box{
+    padding: 15px;
+}
