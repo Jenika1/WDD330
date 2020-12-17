@@ -1,0 +1,19 @@
+body{
+    align-items: center;
+}
+.grid-wraper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;    
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.box1, .box2, .box3, .box4, .box5, .box6{
+    border: 2px solid black;
+    padding: 15px;
+}
+
+.taken {
+    background-color: chartreuse;
+}
