@@ -9,32 +9,18 @@ let btn6 = document.getElementById("click6");
 let btn7 = document.getElementById("click7");
 
 btn1.addEventListener('click', function () {
-   //find the last box in first column that is not "taken" let box = "box";
+    //find the last box in first column that is not "taken" let box = "box";
     let box = "box";
-    for (let i = 6; i > 0; i--) {
+    for (let i = 1; i < 7; i++) {
         let v = box + i;
-        let div = document.getElementsByClassName(v);
-        if 
+        let div = document.querySelector('.' + v);
+        console.log(div);
+        if (div.classList.contains('box6') || !div.classList.contains('taken') && div.nextElementSibling.classList.contains('taken')) {
+            div.classList.add('taken');
+        }
     }
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 btn2.addEventListener('click', function () {
     alert('You Clicked!');
 });
